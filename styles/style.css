@@ -1,0 +1,705 @@
+/* Poppins & Jost */
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*
+Notes : 
+- Jost font for title
+- Poppins font for normal text
+*/
+
+:root {
+  /* Colors */
+  --counterBackgroundColor: #f7f6e3;
+  --primaryTextColor: #f7f6e3;
+  --secondaryTextColor: #4e351e;
+  --primaryBackgroundColor: #546745;
+  --secondaryBackgroundColor: #4e351e;
+
+  /* Sizing */
+  --sectionPadding: 6rem 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--primaryBackgroundColor);
+  color: var(--primaryTextColor);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primaryTextColor);
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+}
+
+p,
+span {
+  font-size: 1rem; /* 16 px */
+  line-height: 1.9rem; /* 30.4 px */
+  font-weight: 200;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utility Classes */
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 90%;
+  }
+}
+
+.large-container {
+  width: 92.5%;
+  margin: 0 auto;
+}
+
+.standing-line {
+  width: 2px;
+  height: 50px;
+  background-color: rgb(247, 246, 227);
+  margin: 1rem auto 2rem;
+}
+
+.header-shadow {
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(rgba(0, 0, 0, 0), var(--primaryBackgroundColor));
+}
+
+/* Buttons */
+.cta-button {
+  cursor: pointer;
+  border: 2px solid var(--counterBackgroundColor);
+  padding: 0.75rem 2rem;
+  background: transparent;
+  color: var(--counterBackgroundColor);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: var(--counterBackgroundColor);
+  color: #4e351e;
+}
+
+/* General sections */
+.sub-section-title {
+  text-align: center;
+}
+
+.sub-section-title h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.sub-section-title p {
+  color: var(--secondaryTextColor);
+}
+
+/* Menu Title */
+.menu-title {
+  margin-bottom: 2.5rem;
+  max-width: 450px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.menu-title h5 {
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.menu-title h1 {
+  font-size: 2.2rem;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: italic;
+}
+
+
+/* Header */
+header {
+  height: 100vh; /* viewport height */
+  background: url("../images/oj1.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.45);
+
+  /* We use flex here so we can fill up the remaining height in #hero */
+  display: flex;
+  flex-direction: column;
+
+  /* Parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Top header */
+#header-info {
+  padding: 0.5rem 0;
+  background: var(--secondaryBackgroundColor);
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header-info-items {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.header-info-items div {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.87rem;
+}
+
+.info-social a svg {
+  transform: scale(0.7) translateY(5px); /* because we use scale, then we need to use translate so it fit on the center position */
+}
+
+.header-info-items svg {
+  transform: scale(0.7);
+}
+
+.header-info-items div span {
+  color: #f7f6e3;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav ul li a {
+  color: #f7f6e3;
+}
+
+.nav h1 {
+  font-weight: 400;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Hero */
+#hero {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero h4 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  font-size: 3.3rem;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-weight: 600;
+}
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* agar tombol jatuh kebawah kalo width udah penuh */
+  margin-top: 1rem;
+}
+
+/* About Section */
+.about {
+  max-width: 1000px;
+  padding: var(--sectionPadding);
+  text-align: center;
+}
+
+.about p {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+
+.about p:first-child {
+  margin-bottom: 1.5rem;
+}
+
+/* Menu */
+.sub-section-title p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 2.4rem;
+}
+
+.menu-title p {
+  font-weight: 350;
+  font-size: 1rem;
+}
+
+.menu {
+  padding: 7rem 0 3rem;
+  text-align: center;
+}
+
+
+.menu-details {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 6rem;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  text-align: left;
+  gap: 1rem;
+}
+
+.menu-item h4 {
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.menu-item p {
+  font-size: 0.75rem;
+}
+
+.menu-item div:last-child {
+  color: var(--secondaryTextColor);
+  font-weight: 500;
+}
+
+/* Carousel in Menu */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.menu-carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.menu-carousel:hover .menu-carousel-slide {
+  animation-play-state: paused;
+}
+
+.menu-carousel-slide {
+  display: inline-block;
+  /* 
+  Infinite karena kita mau animasi nya jalan terus
+  Linear karena kita mau jalan animasi nya itu konstan kecepatannya, jadi ngga tiba" lebih cepat atau tiba" lebih pelan
+  */
+  animation: 20s slide infinite linear;
+}
+
+.menu-img {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  display: inline-block;
+}
+
+.menu-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tooltip in menu carousel */
+.tooltiptext {
+  visibility: hidden;
+  font-weight: 400;
+  font-size: 0.9rem;
+  background-color: #4e351e;
+  color: #f7f6e3;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.15rem 0.75rem;
+
+  /* Positioning */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+.menu-img:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* Reservation */
+.reservation {
+  padding: var(--sectionPadding);
+}
+
+.reservation-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.opening-times,
+.social-media,
+.reservation-info {
+  margin-bottom: 2rem;
+}
+
+.reservation-item-info h3 {
+  margin-bottom: 1.2rem;
+}
+
+.reservation-item-info p {
+  margin-bottom: 0.5rem;
+}
+
+.reservation-item-form div {
+  margin-bottom: 1.5rem;
+}
+
+.reservation-item-form label {
+  display: block;
+  font-weight: 300;
+  margin-bottom: 0.7rem;
+}
+
+.reservation-item-form input,
+.reservation-item-form textarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #4e351e;
+  padding: 0.5rem 1.3rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--counterBackgroundColor);
+}
+
+.reservation-item-form textarea {
+  resize: none;
+}
+
+.reservation-item-form button {
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+/* Location */
+.map {
+  margin-bottom: -5px; /* Untuk nutupin sisa space aneh bawaan dari maps */
+}
+
+.map iframe {
+  height: 450px;
+}
+
+.contact-info-social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Footer */
+
+.footer-info {
+  background: var(--secondaryBackgroundColor);
+  padding: 3rem 0;
+}
+
+.footer-info-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  text-align: center;
+  gap: 2rem;
+}
+
+.footer-info-items h3 {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.footer-info-items p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.footer-info-items button {
+  margin-bottom: 1rem;
+}
+
+.footer-copyright {
+  padding: 1rem 0;
+  background: #6c5234;
+}
+
+.footer-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.footer-mid {
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.footer-right,
+.footer-left {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.hidden {
+  display: none !important;
+}
+
+table {
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 12px;
+  border: 1px solid #f7f6e3;
+}
+
+/* === Modern Login Page Styling === */
+.login-body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  background: linear-gradient(to right, #546745, #4e351e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 1rem;
+  color: #4e351e;
+  font-weight: 600;
+}
+
+
+.login-box input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-box input:focus {
+  border-color: #546745;
+  box-shadow: 0 0 5px rgba(84, 103, 69, 0.5);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #546745;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #3e4e34;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #546745;
+  border: 2px solid #546745;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #546745;
+  color: #fff;
+}
+
+/* Danger button used elsewhere */
+.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+/* === Login & Logout Buttons (Navbar) === */
+#topBar button {
+  padding: 0.5rem 1.2rem;
+  background-color: #f7f6e3;
+  color: #4e351e;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+#topBar button:hover {
+  background-color: #dcdac4;
+  transform: scale(1.05);
+}
+
+.table-bordered {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.no-border th,
+.no-border td {
+  border: none !important;
+}
+
+/* Optional: sembunyikan hidden elemen */
+.hidden {
+  display: none;
+}
+
+.toast-notification {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #16a34a;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 9999;
+  font-weight: bold;
+}
+
+.toast-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-notification.hidden {
+  display: none;
+}
+
+#adminLoginToast {
+  background-color: #4CAF50; /* Hijau */
+}
+
+#adminLogoutToast {
+  background-color: #f44336; /* Merah */
+}

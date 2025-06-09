@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="login-body">
+
+  <div class="login-box">
+    <img src="../images/LogoOmahJawa.png" alt="LogoOmahJawa" class="logo-login">
+    <h2>Admin Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button class="btn-primary" onclick="handleLogin()">Login</button>
+    <button class="btn-secondary" onclick="window.location.href='index.html'">Kembali</button>
+  </div>
+
+  <script>
+    function handleLogin() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+
+      if (user === "admin" && pass === "admin123") {
+        localStorage.setItem("isAdmin", "true");
+        window.location.href = "index.html";
+      } else {
+        alert("Username atau password salah!");
+      }
+    }
+  </script>
+</body>
+</html>

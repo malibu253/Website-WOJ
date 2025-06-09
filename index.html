@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/responsive.css" />
+
+    <!-- Aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>warung omah jawa</title>
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+  </head>
+
+  <body>
+    <div id="adminLoginToast" class="toast-notification hidden">
+      Anda login sebagai admin!
+    </div>
+    
+    <div id="adminLogoutToast" class="toast-notification hidden">
+      Anda telah logout dari admin.
+    </div>
+    
+   <!-- Header -->
+<header>
+  <!-- Logo and navigation for desktop -->
+  <nav id="nav-desktop">
+    <div class="nav large-container">
+      <ul>
+        <li data-aos="fade-down" data-aos-duration="500">
+          <a href="/">Home</a>
+        </li>
+        <li data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
+          <a href="#about">Tentang</a>
+        </li>
+        <li data-aos="fade-down" data-aos-duration="500" data-aos-delay="200">
+          <a href="#menu">Menu</a>
+        </li>
+      </ul>
+
+      <h1 data-aos="fade-down" data-aos-duration="500" data-aos-delay="300">
+        WARUNG OMAH JAWA
+      </h1>
+
+      <ul>
+        <li data-aos="fade-down" data-aos-duration="500" data-aos-delay="400">
+          <a href="#reservation">Reservasi</a>
+        </li>
+        <li data-aos="fade-down" data-aos-duration="500" data-aos-delay="500">
+          <a href="#location">Lokasi</a>
+        </li>
+        <li data-aos="fade-down" data-aos-duration="500" data-aos-delay="400">
+          <div id="topBar">
+            <button onclick="window.location.href='login.html'" id="loginBtn">Login</button>
+            <button onclick="logout()" id="logoutBtn" class="hidden">Logout</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+      <!-- Logo and navigation for mobile -->
+      <nav id="nav-mobile">
+        <div class="nav-mobile">
+          <div class="nav large-container">
+            <h1
+              data-aos="fade-down"
+              data-aos-duration="500"
+              data-aos-delay="200"
+            >
+              WARUNG OMAH JAWA
+            </h1>
+
+            <div id="burger-navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-mobile-main">
+          <div>
+            <a href="/">Home</a>
+          </div>
+          <div>
+            <a href="#about">Tentang</a>
+          </div>
+          <div>
+            <a href="#menu">Menu</a>
+          </div>
+          <div>
+            <a href="https://drive.google.com/file/d/1Td6HJwz-axS1COV8r2QLt-5KnIBAicU9/view">Menu Lengkap</a>
+          </div>
+          <div>
+            <a href="#reservation">Reservasi</a>
+          </div>
+          <div>
+            <a href="#location">Lokasi</a>
+          </div>
+          <div id="topBar">
+            <button onclick="window.location.href='login.html'" id="loginBtn">Login</button>
+            <button onclick="logout()" id="logoutBtn" class="hidden">Logout</button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+      <section id="hero">
+        <div
+          class="hero main-container"
+          data-aos="fade-in"
+          data-aos-duration="1000"
+          data-aos-delay="800"
+        >
+          <h4>Sajian Rasa, Hangatnya Tradisi</h4>
+          <h1>WARUNG OMAH JAWA</h1>
+          <div class="hero-cta">
+            <a href="#menu">
+              <button class="cta-button">Lihat Menu</button>
+            </a>
+
+            <a href="#reservation">
+              <button class="cta-button">Reservasi</button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="header-shadow"></div>
+    </header>
+    <!-- End header -->
+
+    <!-- About -->
+    <section id="about">
+      <div class="about main-container">
+        <p data-aos="fade-up">
+            Warung Omah Jawa adalah tempat makan di Kandeg-Baron-Nganjuk, Jawa Timur, yang menyajikan masakan khas Jawa dengan cita rasa autentik. 
+            Mengusung konsep tradisional, warung ini menghadirkan suasana hangat dan akrab dengan interior bernuansa Jawa serta fasilitas lengkap. Nikmati beragam hidangan lezat, 
+            mulai dari masakan Jawa hingga aneka minuman dengan harga terjangkau.
+        </p>
+        <p data-aos="fade-up">Terima kasih telah berkunjung ke Warung Omah Jawa!</p>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu">
+      <div class="menu main-container">
+        <div class="menu-title" data-aos="fade-up">
+          <h5>Jelajahi</h5>
+          <h1>Menu Kami</h1>
+          <p>
+            Nikmati cita rasa autentik masakan Jawa, di setiap hidangan yang kami sajikan dengan kehangatan tradisi!
+          </p>
+        </div>
+
+        <!-- Makanan utama -->
+        <div class="sub-menu">
+          <div class="sub-section-title" data-aos="fade-up">
+            <h2>Makanan</h2>
+            <p>Hidangan khas Jawa dengan cita rasa autentik yang menggugah selera</p>
+            
+            <div class="standing-line"></div>
+            <p><a href="https://drive.google.com/file/d/1Td6HJwz-axS1COV8r2QLt-5KnIBAicU9/view" class="menu-link">Klik untuk Menu Lengkap</a></p>
+          </div>
+            <!-- Tabel Menu -->
+            <table id="tableMakanan">
+            <thead id="headerMakanan">
+              <tr>
+                <th>Nama Makanan</th>
+                <th>Harga</th>
+                <th id="headerMakanan1" class="hidden">Aksi</th>
+            
+                <th>Nama Makanan</th>
+                <th>Harga</th>
+                <th id="headerMakanan2" class="hidden">Aksi</th>
+              </tr>
+            </thead>              
+            <tbody id="bodyMakanan"></tbody>
+          </table>
+          
+
+        
+            </div>
+          </div>
+        </div>
+      </div>
+   
+
+    <!-- Main course carousel -->
+    <div
+      class="menu-carousel main-course-carousel"
+      data-aos="fade-up"
+      data-aos-duration="500"
+      data-aos-delay="100"
+    >
+      <div class="menu-carousel-slide main-course-carousel-slide">
+        <span class="menu-img">
+          <img src="./images/makanan/ayamsalepo.png" />
+          <span class="tooltiptext">Sego Ayam Salepo</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/makanan/ayamwiwit.jpg" />
+          <span class="tooltiptext">Sego Ayam Wiwitan</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/makanan/ayampg.jpg" />
+          <span class="tooltiptext">Sego Ayam Panggang</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/makanan/segopecel.jpg" />
+          <span class="tooltiptext">Sego Pecel</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/makanan/ayamkremes.jpg" />
+          <span class="tooltiptext">Ayam Kremes + Nasi</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/makanan/ayamgeprek.jpg" />
+          <span class="tooltiptext">Ayam Geprek + Nasi </span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/makanan/nasgorjawa.jpg" />
+          <span class="tooltiptext">Nasi Goreng Jawa</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/makanan/baksojawa.jpeg" />
+          <span class="tooltiptext">Bakso Grobok Kencong</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Bar -->
+    <section id="menu">
+      <div class="menu main-container">
+        <div class="sub-menu">
+          <div class="sub-section-title" data-aos="fade-up">
+            <h2>Minuman</h2>
+            <p>Aneka minuman segar dan hangat untuk menemani santapan Anda.</p>
+
+            <div class="standing-line"></div>
+            <p><a href="https://drive.google.com/file/d/1Td6HJwz-axS1COV8r2QLt-5KnIBAicU9/view" class="menu-link">Klik untuk Menu Lengkap</a></p>
+          </div>
+
+          <!-- Detail menu dan harga -->
+          <div class="menu-details">
+            <div class="menu-detail" data-aos="fade-up">
+              
+              <!-- Tabel Menu -->
+              <table id="tableMinuman">
+                <thead id="headerMinuman">
+                  <tr>
+                    <th>Nama Minuman</th>
+                    <th>Harga</th>
+                    <th id="headerMinuman1" class="hidden">Aksi</th>
+                
+                    <th>Nama Minuman</th>
+                    <th>Harga</th>
+                    <th id="headerMinuman2" class="hidden">Aksi</th>
+                  </tr>
+                </thead>              
+                <tbody id="bodyMinuman"></tbody>
+              </table>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Minuman carousel -->
+    <div
+      class="menu-carousel drinks-carousel"
+      data-aos="fade-up"
+      data-aos-duration="500"
+      data-aos-delay="100"
+    >
+      <div class="menu-carousel-slide drinks-carousel-slide">
+        <span class="menu-img">
+          <img src="./images/minuman/teh.jpg" />
+          <span class="tooltiptext">Teh Hangat/Dingin</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/minuman/kopiomahjawa.jpeg" />
+          <span class="tooltiptext">Kopi Omah Jawa</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/minuman/jeruk.png" />
+          <span class="tooltiptext">Jeruk Hangat/Dingin</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/minuman/wedangjahe.jpeg" />
+          <span class="tooltiptext">Wedang Jahe Bandrek</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/minuman/esdegan.jpg" />
+          <span class="tooltiptext">Es Degan Joglo</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/minuman/es tape ketan.jpg" />
+          <span class="tooltiptext">Es Tape Ketan</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/minuman/esdawet.jpg" />
+          <span class="tooltiptext">Es Dawet Blawong</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/minuman/es campur.jpg" />
+          <span class="tooltiptext">Es Campur Gebyok</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/minuman/jusjambu.jpeg" />
+          <span class="tooltiptext">Jus Jambu</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/minuman/squashpandan.jpg" />
+          <span class="tooltiptext">Squash Pandan</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/minuman/jusalpukat.jpeg" />
+          <span class="tooltiptext">Jus Alpukat</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/minuman/sodanggreges.jpg" />
+          <span class="tooltiptext">Soda Nggereges</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Camilan -->
+    <section id="menu">
+      <div class="menu main-container">
+        <!-- Makanan utama -->
+        <div class="sub-menu">
+          <div class="sub-section-title" data-aos="fade-up">
+            <h2>Camilan</h2>
+            <p>Camilan tradisional Jawa yang cocok untuk dinikmati kapan saja</p>
+
+            <div class="standing-line"></div>
+            <p><a href="https://drive.google.com/file/d/1Td6HJwz-axS1COV8r2QLt-5KnIBAicU9/view" class="menu-link">Klik untuk Menu Lengkap</a></p>
+          </div>
+
+          <!-- Detail menu dan harga -->
+          <div class="menu-details">
+            <div class="menu-detail" data-aos="fade-up">
+              <div class="menu-item">
+
+              <table id="tableCamilan">
+                  <thead id="headerCamilan">
+                    <tr>
+                      <th>Nama Camilan</th>
+                      <th>Harga</th>
+                      <th id="headerCamilan1" class="hidden">Aksi</th>
+                    
+                      <th>Nama Camilan</th>
+                      <th>Harga</th>
+                      <th id="headerCamilan2" class="hidden">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="bodyCamilan"></tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Camilan carousel -->
+    <div
+      class="menu-carousel snacks-carousel"
+      data-aos="fade-up"
+      data-aos-duration="500"
+      data-aos-delay="100"
+    >
+      <div class="menu-carousel-slide snacks-carousel-slide">
+        <span class="menu-img">
+          <img src="./images/camilan/tempemendoan.jpg" />
+          <span class="tooltiptext">Tempe Mendoan</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/camilan/kebab.jpg" />
+          <span class="tooltiptext">Kebab Lesung</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/camilan/udangkriwul.jpg" />
+          <span class="tooltiptext">Udang Kriwul</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/camilan/siomay.jpg" />
+          <span class="tooltiptext">Siomay Salju</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/camilan/pgkrispy.jpeg" />
+          <span class="tooltiptext">Pisang Goreng Krispy</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/camilan/kentanggoreng.jpg" />
+          <span class="tooltiptext">Kentang Goreng</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/camilan/sosisgoreng.jpg" />
+          <span class="tooltiptext">Sosis</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/camilan/cheeseroll.jpg" />
+          <span class="tooltiptext">Cheeseroll</span>
+        </span>
+        <span class="menu-img">
+          <img src="./images/camilan/choocoroll.jpg" />
+          <span class="tooltiptext">Chocoroll</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Contact & Reservation -->
+    <section id="reservation">
+      <div class="reservation main-container">
+        <div class="menu-title" data-aos="fade-up">
+          <h1>Reservasi</h1>
+          <p>Hubungi kami untuk reservasi dan nikmati kehangatan kuliner khas Jawa.</p>
+        </div>
+
+        <div class="reservation-items">
+          <div class="reservation-item-info" data-aos="fade-up">
+            <div class="reservation-info">
+              <p>Reservasi Anda akan kami konfirmasi dalam 24 jam.</p>
+            </div>
+
+            <div class="opening-times">
+              <h3>Jam Buka</h3>
+
+              <div class="opening-times-schedule">
+                <div>
+                  <p>Senin - Minggu</p>
+                  <p>10.00 - 22.00 WIB</p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="social-media">
+              <h3>Media Sosial Kami</h3>
+              <div class="contact-info-social">
+                <a href="https://www.instagram.com/warung_omah_jawa">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="#FFF"
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                    />
+                  </svg>
+                </a>
+
+                <a href="https://tiktok.com/@warungomahjawa">
+                  <svg
+                 xmlns="http://www.w3.org/2000/svg" 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 50 50">
+                <path fill="#FFF"
+                 d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"></path>
+            </svg>
+                </a>
+
+                <a href="https://www.facebook.com/share/1B8zQCVbMb/?mibextid=wwXIfr">
+                  <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                  width="24" 
+                  height="24" 
+                  viewBox="0 0 24 24">
+                  <path fill="#FFF"
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <form
+            class="reservation-item-form"
+            id="reservation-item-form"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div>
+              <label for="table_name">Nama</label>
+              <input
+                name="table_name"
+                type="text"
+                id="table_name"
+                placeholder="Nama Anda"
+              />
+            </div>
+
+            <div>
+              <label for="table_capacity">Jumlah Orang</label>
+              <input
+                type="number"
+                name="table_capacity"
+                id="table_capacity"
+                placeholder="Jumlah Orang"
+              />
+            </div>
+
+            <div>
+              <label for="order_date">Tanggal dan Waktu (WIB)</label>
+              <input
+                name="order_date"
+                type="datetime-local"
+                id="order_date"
+                placeholder="Waktu Kedatangan"
+              />
+            </div>
+
+            <div>
+              <label for="order">Pesan Disini</label>
+              <textarea
+                name="order"
+                id="order"
+                cols="30"
+                rows="10"
+                placeholder="Biarkan kosong jika ingin memesan langsung di tempat"
+              ></textarea>
+            </div>
+
+            <div>
+              <a>
+                <button>Kirim</button>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lokasi -->
+    <div id="location">
+      <div class="location">
+        <div class="map" data-aos="fade-up">
+          <iframe
+           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.7597942209563!2d112.03657727500314!3d-7.601099592413863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7849a59b74f2b7%3A0x522e265d47898662!2sWarung%20Omah%20Jawa!5e0!3m2!1sen!2sid!4v1741287868374!5m2!1sen!2sid"
+            width="100%"
+            style="border: 0; padding: 0; margin: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-info">
+        <div class="footer-info-items main-container">
+          <div data-aos="fade-up">
+            <h3>Selamat Datang</h3>
+            <p>
+                Warung Omah Jawa, menghadirkan cita rasa autentik dan kehangatan tradisi. Nikmati setiap sajian dengan suasana yang akrab dan penuh nostalgia.
+            </p>
+            
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100">
+            <h3>Kunjungi</h3>
+            <p>Kandeg, Waung, Baron, Nganjuk, Jawa Timur</p>
+
+            <h3>Hubungi</h3>
+            <p> +62 812-1657-1226 </p>
+            <p>warungomahjawa@gmail.com</p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="200">
+            <div>
+              <h3>Jam Buka</h3>
+              <div>
+                <p>Senin - Minggu </p>
+                <p>10.00 - 22.00 WIB</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <div class="footer-items large-container">
+          <div class="footer-left">
+            &copy; 2025 Warung Omah Jawa. All rights reserved.
+          </div>
+
+          <div class="footer-mid">Warung Omah Jawa</div>
+
+          <div class="footer-right">Menyajikan cita rasa dan kehangatan tradisi Jawa</div>
+        </div>
+      </div>
+    </footer>
+    <!-- End footer -->
+
+    <!-- Javascript -->
+    <script src="./js/script.js" type="text/javascript"></script>
+
+    <!-- Aos script -->
+    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
